@@ -1,0 +1,38 @@
+{% extends 'Home.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="row justify-content-center align-items-center" >
+  <div class="col-lg-6">
+		<div class="box-element">
+				<div id="user-info">
+					<hr>
+					<h5 style = "text-align:center"> Add Message Service </h5>
+					<hr>
+					<form class="Add_Code" method="POST" autocomplete="off" id="form" name ="Add">
+						{% csrf_token %}
+
+           <div class="form-field">
+              {{ Forms.code|as_crispy_field }}
+
+						</div>
+             <div class="form-field">
+               {{ Forms.message|as_crispy_field  }}
+            </div>
+
+					       <hr>
+ 	                <input id="form-button" class="btn btn-success btn-block" type="submit" value="Save">
+ 	              <hr>
+ 	              {% if messages %}
+ 	               {% for message in messages %}
+ 	                {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+ 	                {% endfor %}
+ 	                {% endif %}
+ 	              </form>
+ 	          </div>
+ 	        </div>
+ 	  </div>
+ 	</div>
+
+ 	{% endblock content %}
