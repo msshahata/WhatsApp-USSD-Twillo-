@@ -56,8 +56,8 @@ def ReceivedMSG(request):
             details = WhatsAppDetails.objects.get(code = body)
             result = details.message
             resp.message(result)
-            savedataRec = WhatsAppRecieved(message =body,PhoneNo=PhoneNo)
-            savedataRec.save()
+            #savedataRec = WhatsAppRecieved(message =body,PhoneNo=PhoneNo)
+            #savedataRec.save()
             return HttpResponse(resp)
         except WhatsAppDetails.DoesNotExist:
             result = 'مرحبا بكم في الخدمة التجريبية لديوان الزكاة، لبدء الخدمة قم بإعادة إرسال كلمة بدء'
