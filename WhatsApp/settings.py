@@ -31,7 +31,7 @@ SECRET_KEY = 'twct@8jd%5@0_q@n88vgo!u+jh8r3x=a^ng_k6%4)98y272$o8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.ngrok.io','127.0.0.1','https://whatsappussd.herokuapp.com/']
+ALLOWED_HOSTS = ['.ngrok.io','127.0.0.1','https://ussdwhatsapp.herokuapp.com/']
 
 
 # Application definition
