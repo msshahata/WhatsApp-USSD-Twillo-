@@ -5,7 +5,7 @@ from django.db import models
 
 class WhatsAppDetails(models.Model):
     code = models.CharField(max_length = 20, unique=True)
-    message = models.CharField(max_length = 5000)
+    message = models.TextField(max_length = 5000)
 
     def __str__(self):
         return self.code
@@ -13,7 +13,7 @@ class WhatsAppDetails(models.Model):
 
 class WhatsAppRecieved(models.Model):
     PhoneNo = models.CharField(max_length = 20)
-    message = models.CharField(max_length = 5000)
+    message = models.TextField(max_length = 5000)
 
     def __str__(self):
         return self.PhoneNo
@@ -21,7 +21,7 @@ class WhatsAppRecieved(models.Model):
 class WhatsAppSendMSG(models.Model):
     From = models.CharField(max_length = 20)
     To = models.CharField(max_length = 20)
-    message = models.CharField(max_length = 5000)
+    message = models.TextField(max_length = 5000)
 
     def __str__(self):
         return self.To
